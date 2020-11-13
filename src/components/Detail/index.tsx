@@ -25,7 +25,7 @@ const DetailSection = () => {
             조해화 𐤟 조명순 <span>의 장녀</span> 유나
           </h3>
         </div>
-        <BottomImage />
+        {/* <BottomImage /> */}
       </div>
       <style jsx>{`
         .wrapper {
