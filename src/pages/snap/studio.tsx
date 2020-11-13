@@ -4,22 +4,22 @@ import Buttons from 'src/components/Album/Buttons';
 import Snap from 'src/components/Album/Snap';
 import Page from 'src/components/Page';
 
-const albumOrder = [1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1];
+const albumOrder = [1, 2, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1];
 
-const Outside: NextPage = () => {
+const Studio: NextPage = () => {
   return (
     <Page padding="1rem">
       <Buttons
-        next="/snap/date"
-        prev="/snap/studio"
-        nextLabel="일상사진"
-        prevLabel="웨딩사진"
+        next="/snap/outside"
+        prev="/snap/date"
+        nextLabel="야외스냅"
+        prevLabel="일상사진"
       />
       {albumOrder.map((count, i) => (
         <Snap
           id={i}
           count={count}
-          path={'/images/album/outside'}
+          path={'/images/album/studio'}
           key={`snap-image-${i}`}
         />
       ))}
@@ -27,4 +27,4 @@ const Outside: NextPage = () => {
   );
 };
 
-export default Outside;
+export default Studio;

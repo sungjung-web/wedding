@@ -13,19 +13,18 @@ const AlbumSection = () => {
   return (
     <Section heightRatio={1}>
       <div className="wrapper">
-        {thumbnails.map((thumbnail) => (
-          <div className={thumbnail} key={`thumbnail-${thumbnail}`}>
+        {thumbnails.map((key) => (
+          <div className={`thumbnail ${key}`} key={`thumbnail-${key}`}>
             <Image
-              src={`/images/thumbnail/${thumbnail}.jpeg`}
-              alt={thumbnail}
-              quality={30}
-              loading="eager"
+              src={`/images/album/thumbnail/${key}.jpeg`}
+              alt={key}
+              quality={100}
               unsized
             />
           </div>
         ))}
         <div className="button-wrapper">
-          <Link href="/snap/wedding/">
+          <Link href="/snap/studio/">
             <button>
               <span>☝︎︎</span>
               {'웨딩사진'}
@@ -47,7 +46,7 @@ const AlbumSection = () => {
       </div>
       <style jsx>{`
         div.wrapper {
-          padding: 1rem;
+          padding: 2rem;
           display: grid;
           grid-gap: 10px;
           grid-template-columns: repeat(2, 1fr);
@@ -82,6 +81,9 @@ const AlbumSection = () => {
         span {
           font-size: 1.3rem;
           margin-right: 0.5rem;
+        }
+        div.thumbnail {
+          min-height: 30%;
         }
         div.first {
           grid-area: first;

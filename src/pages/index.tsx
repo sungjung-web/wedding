@@ -5,25 +5,23 @@ import ContactSection from 'src/components/Contact';
 import DetailSection from 'src/components/Detail';
 import Divider from 'src/components/Divider';
 import MainSection from 'src/components/Main';
+import NavigationSection from 'src/components/Navigation';
+import Page from 'src/components/Page';
 
 const Home: NextPage = () => {
   return (
-    <main className="page">
+    <Page>
       <MainSection />
       <Divider />
       <DetailSection />
       <Divider />
+      <AlbumSection />
+      <Divider />
       <ContactSection />
       <Divider />
-      <AlbumSection />
-      <style jsx>{`
-        .page {
-          width: 100%;
-          max-width: 500px;
-          margin: 0 auto;
-        }
-      `}</style>
-    </main>
+      <NavigationSection />
+      <Divider />
+    </Page>
   );
 };
 
