@@ -9,7 +9,7 @@ import Wrapper from './Wrapper';
 const MainSection = () => {
   const isDarkMode = useDarkmode();
   return (
-    <Section>
+    <Section useHeightRatio>
       <Wrapper>
         {!isDarkMode && <BgLight />}
         <Content />

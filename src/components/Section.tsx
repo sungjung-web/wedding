@@ -3,19 +3,24 @@ import useClient from 'src/hooks/useClient';
 
 interface SectionProps {
   heightRatio?: number;
+  useHeightRatio?: boolean;
 }
 
-const Section: FC<SectionProps> = ({ heightRatio = 1, children }) => {
+const Section: FC<SectionProps> = ({
+  useHeightRatio = false,
+  heightRatio = 1,
+  children,
+}) => {
   const client = useClient({ heightRatio });
 
   return (
     <section>
       {children}
       <style jsx>{`
-        min-height: ${client.height};
+        ${useHeightRatio ? `min-height: ${client.height}` : ''};
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
       `}</style>
     </section>
   );

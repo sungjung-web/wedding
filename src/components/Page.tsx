@@ -9,7 +9,7 @@ const Page: FC<PageProps> = ({ padding = '0', children }) => (
     {children}
     <style jsx>{`
       width: 100%;
-      margin: '0 auto';
+      margin: 0 auto;
       padding: ${padding};
       max-width: 500px;
     `}</style>

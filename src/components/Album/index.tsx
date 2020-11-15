@@ -11,7 +11,7 @@ const AlbumSection = () => {
   const thumbnails = ['first', 'second', 'third'];
 
   return (
-    <Section heightRatio={0.8}>
+    <Section>
       <div className="wrapper">
         {thumbnails.map((key) => (
           <div className={`thumbnail ${key}`} key={`thumbnail-${key}`}>

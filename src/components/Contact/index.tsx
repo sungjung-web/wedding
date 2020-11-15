@@ -17,7 +17,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <Section heightRatio={0.3}>
+    <Section>
       <Title>연락처</Title>
       <Wrapper>
         <div>

@@ -6,10 +6,8 @@ import Message from './Message';
 import Wrapper from './Wrapper';
 
 const DetailSection = () => {
-  const heightRatio = 0.8;
-
   return (
-    <Section heightRatio={heightRatio}>
+    <Section>
       <Wrapper>
         <Message />
         <Family />
