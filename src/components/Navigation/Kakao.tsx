@@ -1,5 +1,5 @@
+import Head from 'next/head';
 import React, { useEffect } from 'react';
-import Button from '../Button';
 
 declare var daum: any;
 
@@ -13,20 +13,19 @@ const Kakao = () => {
   }, []);
 
   return (
-    <div className="wrapper">
-      <div
-        id="daumRoughmapContainer1605435833038"
-        className="root_daum_roughmap root_daum_roughmap_landing"
-      />
-      <script
-        className="daum_roughmap_loader_script"
-        src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
-      />
+    <div
+      id="daumRoughmapContainer1605435833038"
+      className="root_daum_roughmap root_daum_roughmap_landing"
+    >
+      <Head>
+        <script
+          className="daum_roughmap_loader_script"
+          src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
+        />
+      </Head>
       <style jsx>{`
-        div.root_daum_roughmap {
-          width: 100%;
-          padding: 2rem 2rem 0;
-        }
+        width: 100% !important;
+        padding: 1rem 0 0;
       `}</style>
     </div>
   );

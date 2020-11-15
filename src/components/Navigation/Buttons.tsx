@@ -35,7 +35,6 @@ const Buttons = () => {
       <Button onClick={handleKakao} label="카카오" />
       <Button onClick={handleNaver} label="네이버" />
       <style jsx>{`
-        padding: 0 2rem;
         display: flex;
       `}</style>
     </div>

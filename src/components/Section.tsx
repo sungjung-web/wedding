@@ -13,6 +13,9 @@ const Section: FC<SectionProps> = ({ heightRatio = 1, children }) => {
       {children}
       <style jsx>{`
         min-height: ${client.height};
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       `}</style>
     </section>
   );
