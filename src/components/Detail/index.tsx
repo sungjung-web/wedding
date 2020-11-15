@@ -1,15 +1,14 @@
 import React from 'react';
-import useClient from 'src/hooks/useClient';
 import Section from '../Section';
 import BottomImage from './BottomImage';
+import Wrapper from './Wrapper';
 
 const DetailSection = () => {
   const heightRatio = 0.8;
-  const client = useClient({ heightRatio });
 
   return (
     <Section heightRatio={heightRatio}>
-      <div className="wrapper">
+      <Wrapper>
         <p>
           각 계절을 지내보며 알아가보라는 할머니의 말을 들은지 3년이 지나갑니다.
           같이 사계절을 지내보니 서로가 서로의 삶의 원동력이자 기쁨이라는 것을
@@ -26,15 +25,8 @@ const DetailSection = () => {
           </h3>
         </div>
         {/* <BottomImage /> */}
-      </div>
+      </Wrapper>
       <style jsx>{`
-        .wrapper {
-          min-height: ${client.height};
-          padding: 2rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-        }
         p {
           font-size: 1.1rem;
           line-height: 1.5rem;
