@@ -11,7 +11,7 @@ const ContactSection = () => {
     { name: '어머니 심섭순', contact: '01024382212' },
   ];
   const bride = [
-    { name: '신부 조유나', contact: '01090065243' },
+    { name: '신부 조유나', contact: '01090065244' },
     { name: '아버지 조해화', contact: '01035518893' },
     { name: '어머니 조명순', contact: '01041180789' },
   ];
