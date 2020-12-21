@@ -11,7 +11,6 @@ const BgDark = () => {
         loading="eager"
         unsized
       />
-      <div className={`dim`} />
       <style jsx>{`
         .wrapper {
           display: flex;
@@ -22,13 +21,6 @@ const BgDark = () => {
           overflow: hidden;
           width: 100%;
           max-width: 700px;
-        }
-        .dim {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          width: 100%;
-          }
         }
       `}</style>
     </div>
