@@ -12,6 +12,7 @@ const Page: FC<PageProps> = ({ padding = '0', children }) => (
       margin: 0 auto;
       padding: ${padding};
       max-width: 500px;
+      position: relative;
     `}</style>
   </main>
 );

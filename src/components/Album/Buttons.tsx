@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React, { FC } from 'react';
 import useDarkmode from 'src/hooks/useDarkmode';
 
@@ -10,20 +11,15 @@ interface ButtonsProps {
 }
 
 const Buttons: FC<ButtonsProps> = ({ prev, next, prevLabel, nextLabel }) => {
+  const router = useRouter();
   const isDarkMode = useDarkmode();
   const buttonColor = isDarkMode ? 'white' : 'black';
 
   return (
     <div>
-      <Link href={prev}>
-        <button>{`☜︎ ${prevLabel}`}</button>
-      </Link>
-      <Link href="/">
-        <button>{`홈으로`}</button>
-      </Link>
-      <Link href={next}>
-        <button>{`${nextLabel} ☞`}</button>
-      </Link>
+      <button onClick={() => router.replace(prev)}>{`☜︎ ${prevLabel}`}</button>
+      <button onClick={() => router.back()}>{`홈으로`}</button>
+      <button onClick={() => router.replace(next)}>{`${nextLabel} ☞`}</button>
       <style jsx>{`
         div {
           display: flex;

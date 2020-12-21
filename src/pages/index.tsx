@@ -8,6 +8,7 @@ import HeartSection from 'src/components/Heart';
 import MainSection from 'src/components/Main';
 import NavigationSection from 'src/components/Navigation';
 import Page from 'src/components/Page';
+import RecommendSection from 'src/components/Recommend';
 
 const Home: NextPage = () => {
   return (
@@ -21,6 +22,8 @@ const Home: NextPage = () => {
       <ContactSection />
       <Divider />
       <NavigationSection />
+      <Divider />
+      <RecommendSection />
       <Divider />
       <HeartSection />
     </Page>
