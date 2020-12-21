@@ -24,7 +24,7 @@ const Button: FC<ButtonProps> = ({ href, label }) => {
         justify-content: center;
         align-items: center;
         background: ${isDarkMode ? 'black' : 'white'};
-        box-shadow: 0 0 1px 1px ${isDarkMode ? 'white' : 'lightgray'};
+        box-shadow: 0 0 1px 1px ${isDarkMode ? 'white' : 'black'};
       `}</style>
     </a>
   );
